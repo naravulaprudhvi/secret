@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Question</title>
+  <style>
+    body {
+      font-family: 'Cursive', sans-serif;
+      text-align: center;
+      background: radial-gradient(circle, #ff7eb3, #ff758c);
+      color: white;
+      overflow: hidden;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    h1 {
+      font-size: 4em;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    .heart {
+      font-size: 5em;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+    .buttons {
+      margin-top: 40px;
+    }
+    .button {
+      font-size: 1.5em;
+      padding: 15px 30px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+    .yes {
+    background-color: #6A5ACD; /* Soft purple */
+    color: white;
+  }
+  .no {
+    background-color: #FF4500; /* Vibrant orange */
+    color: white;
+    position: absolute;
+  }
+  .button:hover {
+    background-color: #FFD700; /* Golden yellow hover effect */
+    color: black;
+  }
+    }
+    .message {
+      margin-top: 30px;
+      font-size: 2.5em;
+    }
+  </style>
+</head>
+<body>
+  <h1>💖 Do You Love Me? 💖</h1>
+  <div class="heart">❤️</div>
+  <div class="buttons">
+    <button class="button yes" onclick="showYesMessage()">YES</button>
+    <button class="button no" onmouseover="moveNoButton()">NO</button>
+  </div>
+  <div class="message" id="message"></div>
+  <script>
+    function showYesMessage() {
+      const message = document.getElementById('message');
+      message.innerText = "Naku Tulusyeeee PANDI! 😍";
+      document.querySelector('.heart').innerText = "💞";
+    }
+    function moveNoButton() {
+      const noButton = document.querySelector('.no');
+      const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+      const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+      noButton.style.left = `${x}px`;
+      noButton.style.top = `${y}px`;
+    }
+  </script>
+</body>
+</html>
