@@ -74,11 +74,12 @@
   </div>
   <div class="message" id="message"></div>
   <script>
-    function showYesMessage() {
-      const message = document.getElementById('message');
-      message.innerText =  " vadelaiii vyeeee babuuuu 🥺 plzzz";
-      document.querySelector('.heart').innerText = "💞";
-    }
+function showYesMessage() {
+  const message = document.getElementById('message');
+  message.innerText = "Vadelaiii Vyeeee Babuuuu 🥺 Plzzz";
+  message.style.fontSize = "3.5em"; // Increase the size of the text
+  document.querySelector('.heart').innerText = "💞";
+}
     function moveNoButton() {
       const noButton = document.querySelector('.no');
       const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
